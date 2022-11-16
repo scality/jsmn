@@ -30,6 +30,9 @@
 extern "C" {
 #endif
 
+/* avoids linking clash between mutliple .o using jsmn */
+#define JSMN_STATIC
+
 #ifdef JSMN_STATIC
 #define JSMN_API static
 #else
